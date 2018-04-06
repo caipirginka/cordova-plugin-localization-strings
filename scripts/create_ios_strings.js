@@ -6,7 +6,7 @@ var iosProjFolder;
 var iosPbxProjPath;
 
 var getValue = function(config, name) {
-    var value = config.match(new RegExp('<' + name + '>(.*?)</' + name + '>', "i"));
+    var value = config.match(new RegExp('<' + name + '.*>(.*?)</' + name + '>', "i"));
     if(value && value[1]) {
         return value[1]
     } else {
